@@ -18,13 +18,13 @@ var avgMilesPerGallonDouble = 0.0
 var distanceDouble = 0.0
 var gallonsDouble = 0.0
 
-if let odometerInt = odometerString.toInt() {
+if let odometerInt = Int(odometerString!) {
     distanceDouble = Double(odometerInt)
 }
-if let lastOdometerInt = lastOdometerString.toInt() {
+if let lastOdometerInt = Int(lastOdometerString!) {
     distanceDouble -= Double(lastOdometerInt)
 }
-if let gallonsInt = gallonsString.toInt() {
+if let gallonsInt = Int(gallonsString!) {
     gallonsDouble = Double(gallonsInt)
     avgMilesPerGallonDouble = distanceDouble / gallonsDouble
 }
